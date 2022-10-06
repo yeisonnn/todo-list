@@ -15,7 +15,7 @@ export const ContextProvider = (props) => {
   const [initialFav, setInitialFav] = useState([]);
   const [initialChecked, setInitialChecked] = useState([]);
 
-  if (data.length) {
+  if (data) {
     const dataFavorites = data.filter((todo) => todo.favorite === true);
     setInitialFav(dataFavorites);
   }
