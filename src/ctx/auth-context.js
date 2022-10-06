@@ -9,10 +9,9 @@ export const todosContext = createContext({
   setChecked: () => {},
 });
 
-const data = JSON.parse(localStorage.getItem('data'));
-
 export const ContextProvider = (props) => {
-  const [initialTodos, setInitialTodos] = useState(data);
+  const data = JSON.parse(localStorage.getItem('data'));
+  const [initialTodos, setInitialTodos] = useState(data || []);
   const [initialFav, setInitialFav] = useState([]);
   const [initialChecked, setInitialChecked] = useState([]);
 
