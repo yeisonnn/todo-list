@@ -1,0 +1,29 @@
+.todos-container {
+  position: relative;
+  overflow: auto;
+}
+
+.no-todos {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  width: 100%;
+  text-align: center;
+  color: #333;
+}
+
+.no-todos span {
+  margin-left: 1.3rem;
+  color: #39cccc;
+}
+
+.todos-app__list {
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.todos-list {
+  list-style: none;
+}

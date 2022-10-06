@@ -1,0 +1,35 @@
+.todos-app__input {
+  position: relative;
+  padding: 0 0.5rem;
+}
+
+.todos-app__input input {
+  font-family: 'Give You Glory', cursive;
+  height: 100%;
+  width: 100%;
+  font-size: 1.4rem;
+  border: none;
+  border-bottom: 1px solid #111;
+  letter-spacing: 1.5px;
+}
+
+.todos-app__input input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--aqua);
+}
+
+.todos-app__input button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--gren);
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  opacity: 0.8;
+}
+
+.todos-app__input button:hover {
+  opacity: 1;
+}

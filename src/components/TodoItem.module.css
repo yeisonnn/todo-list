@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
+:root {
+  --purple: #b10dc9;
+  --fuchsia: #f012be;
+  --orange: #ff851b;
+  --black: #111111;
+  --gray: #aaaaaa;
+  --white: #ffffff;
+  --navy: #001f3f;
+  --gren: #2ecc40;
+  --aqua: #7fdbff;
+  --olive: #3d9970;
+  --teal: #39cccc;
+}
+
+.todo-item {
+  margin: 13px 0;
+  display: grid;
+  grid-template-columns: min-content min-content 1fr auto;
+  grid-column-gap: 10px;
+  font-size: 1.5rem;
+  font-family: 'Neucha', cursive;
+  padding: 0.4rem;
+  color: #555;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.todo-item__checked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.todo-item__editing {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.todo-item__input {
+  font-family: inherit;
+  width: 90%;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  color: #555;
+  border: none;
+  border-bottom: 1.7px solid var(--aqua);
+}
+
+.todo-item__input:focus {
+  outline: 1.5px dotted cadetblue;
+}
+
+.todo-item__btn {
+  font-size: inherit;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  color: var(--aqua);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.todo-item__btn:hover {
+  font-size: 1.8rem;
+}
+
+.todo-item__text {
+  text-decoration: line-through;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 0 0.2rem;
+  opacity: 0.7;
+}
+
+.todo-item__edit {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.todo-item__edit:hover {
+  opacity: 1;
+}

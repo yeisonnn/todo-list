@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+:root {
+  --purple: #b10dc9;
+  --orange: #ff851b;
+  --black: #111111;
+  --gray: #aaaaaa;
+  --white: #ffffff;
+  --navy: #001f3f;
+  --gren: #2ecc40;
+  --aqua: #7fdbff;
+}
+
+.todos-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-image: url('./images/pexels-matheus-natan-3297593.jpg');
+  background-repeat: no-repeat;
+}
+
+.todos-main {
+  min-width: 80%;
+  max-height: 90vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-column-gap: 2rem;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: var(--white);
+}
+
+.todos-app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 8% 1fr;
+  grid-row-gap: 1rem;
+  max-height: 82vh;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.todos-app__header {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--aqua);
+  color: var(--black);
+  position: relative;
+}
+
+.todos-app__icon {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.todos-app__btn {
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: inherit;
+  opacity: 0.7;
+}
+
+.todos-app__save {
+  color: var(--navy);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.todos-app__save::before {
+  content: 'save';
+  position: absolute;
+  font-size: 0.8rem;
+  color: #333;
+  bottom: 0;
+  margin-left: 3px;
+  font-weight: bold;
+  font-family: 'Neucha', cursive;
+  transition: all 0.3s;
+}
+
+.todos-app__btn:hover {
+  opacity: 1;
+}
+
+.todos-app__restart {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.saved {
+  position: absolute;
+  font-size: 0.9rem;
+  bottom: 0;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .todos-main {
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+    grid-template-rows: 55% 45%;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .todos-main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60% 40%;
+    min-width: 95%;
+    height: 90vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+  .todos-main {
+    grid-template-rows: 60% 40%;
+    min-width: 95%;
+    height: 90vh;
+  }
+}
