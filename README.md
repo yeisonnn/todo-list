@@ -6,4 +6,4 @@ An App that helps you with planning and completing your work. Add, delete and up
 
 how it looks in your browser.
 
-![alt text](./src/images/screenshot.jpg)
+![alt text](./src/images/project.jpg)
