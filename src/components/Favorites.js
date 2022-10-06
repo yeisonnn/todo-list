@@ -45,7 +45,7 @@ const Favorites = () => {
             <h1>{header}</h1>
           </div>
           {!todos.length && showFavorites && (
-            <h2 className={classes['no-favorites']}>No-{header}</h2>
+            <h2 className={classes['no-favorites']}>Add-{header}</h2>
           )}
           {showFavorites ? (
             <FavCheckList data={todos} />

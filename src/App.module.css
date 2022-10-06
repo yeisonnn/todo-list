@@ -20,6 +20,7 @@
   padding: 2rem;
   background-image: url('./images/pexels-matheus-natan-3297593.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .todos-main {
@@ -115,6 +116,7 @@
     grid-template-columns: 1fr;
     grid-row-gap: 2rem;
     grid-template-rows: 55% 45%;
+    width: 95%;
   }
 }
 
@@ -129,11 +131,35 @@
 
 @media screen and (max-width: 500px) {
   html {
-    font-size: 12px;
+    font-size: 15px;
+  }
+
+  .todos-container {
+    padding: 0rem;
+    width: 100%;
+    height: 100vh;
   }
   .todos-main {
-    grid-template-rows: 60% 40%;
-    min-width: 95%;
-    height: 90vh;
+    grid-template-rows: 55% 45%;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  .todos-app__btn {
+    font-size: 2.2rem;
+    top: 10%;
+    opacity: 1;
+  }
+
+  .todos-app__save::before {
+    font-size: 1.2rem;
+    top: 30px;
+  }
+
+  .todos-app__restart {
+    bottom: -13px;
+    right: 3px;
   }
 }
