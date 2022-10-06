@@ -10,12 +10,16 @@ export const todosContext = createContext({
 });
 
 const data = JSON.parse(localStorage.getItem('data'));
-const dataFavorites = data.filter((todo) => todo.favorite === true);
 
 export const ContextProvider = (props) => {
   const [initialTodos, setInitialTodos] = useState(data);
-  const [initialFav, setInitialFav] = useState(dataFavorites || []);
+  const [initialFav, setInitialFav] = useState([]);
   const [initialChecked, setInitialChecked] = useState([]);
+
+  if (data.length) {
+    const dataFavorites = data.filter((todo) => todo.favorite === true);
+    setInitialFav(dataFavorites);
+  }
 
   return (
     <todosContext.Provider
