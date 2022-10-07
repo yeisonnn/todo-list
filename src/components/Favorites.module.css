@@ -60,7 +60,7 @@
 }
 
 .favorites__content {
-  height: 25rem;
+  height: auto;
   width: 98%;
   border-radius: 10px;
   overflow: auto;
@@ -109,7 +109,6 @@
 }
 
 .favorites-item {
-  /* border: 1px solid tomato; */
   display: flex;
   justify-content: center;
   gap: 0.6rem;

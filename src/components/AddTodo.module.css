@@ -33,3 +33,11 @@
 .todos-app__input button:hover {
   opacity: 1;
 }
+
+@media screen and (max-width: 500px) {
+  .todos-app__input {
+    padding: 0.3rem 0.7rem;
+    top: 10px;
+    font-size: 1.5rem;
+  }
+}
